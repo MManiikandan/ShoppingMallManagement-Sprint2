@@ -1,0 +1,347 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Wrapper Div to Center the Table */
+.table-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* General Table Styling */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header Styling */
+th {
+  background-color: #1e88e5; /* Soft Blue header */
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Table Data Cell Styling */
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eeeeee; /* Light gray for borders */
+}
+
+/* Row Hover Effect */
+tr:hover {
+  background-color: #f5f5f5; /* Very light gray on hover */
+}
+
+/* Action Button Styling */
+a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-size: 14px;
+  display: inline-block;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Edit Button Styling */
+a[href*="/update"] {
+  background-color: #43a047; /* Medium Green */
+}
+
+a[href*="/update"]:hover {
+  background-color: #388e3c; /* Darker Green on hover */
+}
+
+/* Delete Button Styling */
+a[href*="/delete"] {
+  background-color: #e53935; /* Soft Red */
+}
+
+a[href*="/delete"]:hover {
+  background-color: #d32f2f; /* Darker Red on hover */
+}
+
+/* Create Button Styling */
+a[href*="/create"] {
+  background-color: #fb8c00; /* Orange */
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+a[href*="/create"]:hover {
+  background-color: #f57c00; /* Darker Orange on hover */
+}
+
+/* Styling for the Table Header Row */
+thead tr {
+  border-bottom: 3px solid #1e88e5; /* Blue border */
+}
+
+/* Centering Text in the Header */
+h2 {
+  color: #444;
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* .....................................................
+/* Centering the Form Container */
+.update-form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 20px;
+}
+
+/* Form Styling */
+form {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Input Field Styling */
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+button {
+  background-color: #1e88e5; /* Soft Blue */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1565c0; /* Darker Blue on hover */
+}
+
+/* Header Styling */
+h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*.....................................................
+/* Centering the Delete Container */
+.delete-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 20px;
+}
+
+/* Confirmation Dialog Styling */
+.confirmation-dialog {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+
+.confirm-button {
+  background-color: #e53935; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #d32f2f; /* Darker Red on hover */
+}
+
+/* Cancel Button Styling */
+.cancel-button {
+  background-color: #9e9e9e; /* Gray */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #757575; /* Darker Gray on hover */
+}
+/*..............................
+/* Centering the Form Container */
+.form-container {
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 20px;
+}
+
+/* Styling for the Form */
+.order-form {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+/* Input Styling */
+.form-input {
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  background-color: #28a745; /* Green background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.submit-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Heading Styling */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/*...............................................
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background for the whole page */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  color: maroon ;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: maroon; 
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #0056b3; 
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
