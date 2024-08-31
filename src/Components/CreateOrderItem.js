@@ -25,7 +25,7 @@ function CreateOrderItem() {
         navigate("/");
       })
       .catch((error) => {
-        console.error("There was an error creating the order item!", error);
+        console.error("There was  error creating the order item!", error);
       });
   };
 
